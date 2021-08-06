@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/*Vars*/
+
+$bg--violet: hsl(273, 75%, 66%);
+$bg--blue: hsl(240, 73%, 65%);
+
+$txt--darkblue: hsl(237, 12%, 33%);
+$txt-blue: hsl(240, 6%, 50%);
+
+$div--blue: hsl(240, 5%, 91%);
+
+$fnt--kumbh: 'Kumbh Sans', sans-serif;
+$fw--thin: 400;
+$fw--wide: 700;
+
+
+/*Setup & Reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: $fnt--kumbh;
+    font-weight: $fw--thin;
+}
+
+/*Block elements Style*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(to bottom, $bg--violet, $bg--blue)
+}
+
+#card {
+    width: 768px;
+    height: auto;
+    margin: auto;
+
+    padding: 2rem 4rem;
+
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.acc--box, h1 {
+    margin: 1rem auto 1rem 50%;
+    padding-bottom: 1rem;
+}
+
+.acc--box {
+    border-bottom: 1px solid $txt-blue;
+}
+
+/*Attribution*/
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
