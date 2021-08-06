@@ -63,6 +63,11 @@ body {
     border-bottom: 1px solid $txt-blue;
 }
 
+.acc--label {
+    display: flex;
+    justify-content: space-between;
+}
+
 /*Attribution*/
 
 .attribution { 
