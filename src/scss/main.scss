@@ -32,9 +32,18 @@ html, body {
     font-weight: $fw--thin;
 }
 
-// Style
+// Text Style
+
+h1 {
+    font-size: 3rem;
+    margin: 3rem 0;
+}
+
+// Block Style
 
 body {
+    padding: 1rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,10 +53,10 @@ body {
 }
 
 #card {
-    width: 900px;
+    width: 100%;
     height: 600px;
     
-    margin: auto;
+    margin: 2rem;
     padding: 2rem 4rem;
 
     background-color: white;
@@ -55,23 +64,14 @@ body {
     box-shadow: 0 16px 48px 0 #438; 
 
     transition: 0.5s ease-in-out;
-}
-
-
-h1 {
-    font-size: 3rem;
-    margin: 3rem 0;
-}
-
+} 
 
 #acc--container {
-    margin-left: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 
 .acc--box {
     margin: 1rem auto;
@@ -99,7 +99,7 @@ h1 {
     font-weight: $fw--thin;
 }
 
-.content {
+.acc--content {
     padding-top: 0.5rem;
     height: 0px;
     min-height: 0px;
@@ -118,13 +118,6 @@ i {
 }
 
 
-
-#img--div {
-    position: fixed;
-    top: 50%;
-    left: 20%;
-    transform: translateY(-50%);
-}
 
 // Attribution
 .attribution { 
