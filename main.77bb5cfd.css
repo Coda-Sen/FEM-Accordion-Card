@@ -84,11 +84,17 @@ img:last-of-type {
   display: flex;
   justify-content: space-between;
   padding-bottom: 0.5rem;
+  font-size: 1.1rem;
   font-weight: 400;
   transition: 0.3s ease-out;
 }
-.acc--box:hover .acc--label {
-  color: orange;
+@media (min-width: 1024px) {
+  .acc--label {
+    font-size: 1rem;
+  }
+  .acc--box:hover .acc--label {
+    color: orange;
+  }
 }
 
 .acc--content {
@@ -101,7 +107,7 @@ img:last-of-type {
 
 i {
   color: orange;
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
   transition: 0.3s ease-out;
 }
 
