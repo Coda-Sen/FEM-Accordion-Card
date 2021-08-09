@@ -88,6 +88,7 @@ body {
         padding-bottom: 6rem;
         padding-right: 9rem;
         padding-left: 50%;
+        overflow: hidden;
     }
 }
 
@@ -118,28 +119,31 @@ body {
     left: 50%;
     top: -9rem;
     transform: translateX(-55%);
-    
+
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    max-height: 200px;
+    max-height: 400px;
+    
+
 
     @include mq {
         width: 50%;
         left: 12.5rem;
-        top: 6.5rem;
+        top: 6rem;
     }
 }
 
 img {
     @include mq {
         width: 95%;
-
         &:first-of-type {
             width: 37.5%;
             position: absolute;
-            left: 3.5%;
-            top: 63%;
+            left: 3%;
+            top: 10.5rem;
+            z-index: 3;
         }
         &:last-of-type {
             transform: translateY(-77%);
