@@ -37,8 +37,7 @@ body {
 }
 @media (min-width: 1024px) {
   body {
-    padding: 0;
-    padding-bottom: auto;
+    padding: 0 0 auto;
   }
 }
 
@@ -49,10 +48,7 @@ body {
 }
 @media (min-width: 1024px) {
   #wrapper {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-    padding-right: 9rem;
-    padding-left: 50%;
+    padding: 4rem 6rem 9rem 50%;
     overflow: hidden;
   }
 }
@@ -76,6 +72,7 @@ body {
 
 .img--div {
   width: auto;
+  max-height: 400px;
   position: absolute;
   left: 50%;
   top: -9rem;
@@ -83,7 +80,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  max-height: 400px;
+}
+.img--div img:not(:first-child) {
+  clip-path: polygon(17.5% 0%, 100% 0, 100% 100%, 17.5% 100%);
 }
 @media (min-width: 1024px) {
   .img--div {
@@ -96,16 +95,18 @@ body {
 @media (min-width: 1024px) {
   img {
     width: 95%;
+    z-index: 1;
   }
   img:first-of-type {
     width: 37.5%;
     position: absolute;
     left: 3%;
     top: 10.5rem;
-    z-index: 3;
+    z-index: 2;
   }
   img:last-of-type {
     transform: translateY(-77%);
+    z-index: 0;
   }
 }
 img:last-of-type {
@@ -135,8 +136,8 @@ img:last-of-type {
   max-height: 6rem;
 }
 .acc--box.active .acc--label {
-  font-weight: 700;
   color: #4a4b5e;
+  font-weight: 700;
   padding-bottom: 1rem;
 }
 .acc--box.active i {
@@ -146,9 +147,9 @@ img:last-of-type {
 .acc--label {
   display: flex;
   justify-content: space-between;
+  color: #787887;
   font-size: 1.1rem;
   font-weight: 400;
-  color: #787887;
   transition: 0.3s ease-out;
 }
 @media (min-width: 1024px) {
@@ -163,11 +164,10 @@ img:last-of-type {
 .acc--content {
   height: 100%;
   max-height: 0px;
-  padding-left: 0;
-  padding-right: 2rem;
+  padding: 0 2rem 0 0;
+  color: #787887;
   line-height: 1.5;
   overflow: hidden;
-  color: #787887;
   transition: 0.3s ease-out;
 }
 @media (min-width: 1024px) {
