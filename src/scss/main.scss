@@ -111,28 +111,29 @@ body {
     }
 } 
 
-.img--div {
-    //dirty fix for the clipping
-    img:not(:first-child) { clip-path: polygon(17.5% 0%, 100% 0, 100% 100%, 17.5% 100%); };
+.img--div {    
     width: auto;
     max-height: 400px;
     //todo: figure out how to do this without setting max-height
     
-
-
     position: absolute;
     left: 50%;
     top: -9rem;
     transform: translateX(-55%);
-
+    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
+    
     @include mq {
         width: 50%;
         left: 12.5rem;
         top: 6rem;
+        
+        //dirty fix for the clipping
+        img:not(:first-child) { 
+            clip-path: polygon(17.25% 0%, 100% 0, 100% 100%, 17.25% 100%); 
+        }    
     }
 }
 
