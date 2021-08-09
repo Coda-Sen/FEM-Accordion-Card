@@ -40,6 +40,7 @@ $br--laptop: 1024px;
 html, body {
     width: 100%;
     height: auto;
+
     font-size: 12px;
     font-family: $fnt--kumbh;
     font-weight: $fw--thin;
@@ -50,6 +51,7 @@ html, body {
 h1 {
     text-align: center;
     font-size: 2.6rem;
+
     margin: 2rem 0 1rem;
     
     @include mq {
@@ -73,8 +75,7 @@ body {
     background-repeat: no-repeat;
 
     @include mq {
-        padding: 0;
-        padding-bottom: auto;
+        padding: 0 0 auto;
     }
 }
 
@@ -83,11 +84,9 @@ body {
     width: 100%;
     height: 100%;
     padding: 9rem 2rem 4rem;
+    
     @include mq {
-        padding-top: 4rem;
-        padding-bottom: 6rem;
-        padding-right: 9rem;
-        padding-left: 50%;
+        padding: 4rem 6rem 9rem 50%;
         overflow: hidden;
     }
 }
@@ -113,20 +112,22 @@ body {
 } 
 
 .img--div {
-    
+    //dirty fix for the clipping
+    img:not(:first-child) { clip-path: polygon(17.5% 0%, 100% 0, 100% 100%, 17.5% 100%); };
     width: auto;
+    max-height: 400px;
+    //todo: figure out how to do this without setting max-height
+    
+
+
     position: absolute;
     left: 50%;
     top: -9rem;
     transform: translateX(-55%);
 
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    max-height: 400px;
-    
-
 
     @include mq {
         width: 50%;
@@ -138,15 +139,22 @@ body {
 img {
     @include mq {
         width: 95%;
+
+        z-index: 1;
+        
         &:first-of-type {
             width: 37.5%;
             position: absolute;
             left: 3%;
             top: 10.5rem;
-            z-index: 3;
+        
+            z-index: 2;
         }
+        
         &:last-of-type {
             transform: translateY(-77%);
+        
+            z-index: 0;
         }
     }
     &:last-of-type {
@@ -180,8 +188,8 @@ img {
             max-height: 6rem;
         }
         .acc--label {
-            font-weight: $fw--wide;
             color: $txt--darkblue;
+            font-weight: $fw--wide;
 
             padding-bottom: 1rem;
             
@@ -196,12 +204,11 @@ img {
     display: flex;
     justify-content: space-between;
 
+    color: $txt--blue;
     font-size: 1.1rem;
     font-weight: $fw--thin;
-    color: $txt--blue;
     
     transition: $tns--main;
-
     
     @include mq {
         font-size: 1.1rem;
@@ -215,12 +222,11 @@ img {
 .acc--content {
     height: 100%;
     max-height: 0px;
-    padding-left: 0;
-    padding-right: 2rem;
+    padding: 0 2rem 0 0;
 
+    color: $txt--blue;
     line-height: 1.5;
     overflow: hidden;
-    color: $txt--blue;
 
     transition: $tns--main;
 
