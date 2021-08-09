@@ -14,7 +14,7 @@ $fnt--kumbh: 'Kumbh Sans', sans-serif;
 $fw--thin: 400;
 $fw--wide: 700;
 
-$tns--main: 0.2s ease-out;
+$tns--main: 0.3s ease-out;
 
 $br--laptop: 1024px;
 
@@ -105,6 +105,8 @@ img {
 }
 
 .acc--box {
+    width: 100%;
+    
     margin: 1rem auto;
     padding: 1rem 0;
     border-bottom: 1px solid #DDD;
@@ -112,7 +114,7 @@ img {
     transition: $tns--main;
     &.active {
         .acc--content {
-            max-height: 200px;
+            max-height: 6rem;
         }
         .acc--label {
             font-weight: $fw--wide;
@@ -144,7 +146,6 @@ img {
     line-height: 1.2;
 
     overflow: hidden;
-    overflow-y: auto;
 
     transition: $tns--main;
 }
@@ -157,7 +158,7 @@ i {
 
 
 
-// Hide other img
+// Hide other breakpoint img
 
 .hide {
     &--desktop {
@@ -170,7 +171,6 @@ i {
         @include mq { display: none; }
     }
 }
-
 
 
 // Attribution

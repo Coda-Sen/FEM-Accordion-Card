@@ -37,7 +37,7 @@ body {
   background-color: white;
   border-radius: 2rem;
   box-shadow: 0 16px 48px 0 #438;
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .img--div {
@@ -63,14 +63,15 @@ img:last-of-type {
 }
 
 .acc--box {
+  width: 100%;
   margin: 1rem auto;
   padding: 1rem 0;
   border-bottom: 1px solid #DDD;
   cursor: pointer;
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 .acc--box.active .acc--content {
-  max-height: 200px;
+  max-height: 6rem;
 }
 .acc--box.active .acc--label {
   font-weight: 700;
@@ -84,7 +85,7 @@ img:last-of-type {
   justify-content: space-between;
   padding-bottom: 0.5rem;
   font-weight: 400;
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 .acc--box:hover .acc--label {
   color: orange;
@@ -95,14 +96,13 @@ img:last-of-type {
   max-height: 0px;
   line-height: 1.2;
   overflow: hidden;
-  overflow-y: auto;
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 
 i {
   color: orange;
   transform: rotate(180deg);
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .hide--desktop {
