@@ -6,7 +6,7 @@ $bg--violet: hsl(273, 75%, 66%);
 $bg--blue: hsl(240, 73%, 65%);
 
 $txt--darkblue: hsl(237, 12%, 33%);
-$txt-blue: hsl(240, 6%, 50%);
+$txt--blue: hsl(240, 6%, 50%);
 
 $div--blue: hsl(240, 5%, 91%);
 
@@ -36,9 +36,10 @@ $br--laptop: 1024px;
     box-sizing: border-box;
 }
 
+
 html, body {
     width: 100%;
-    height: auto;
+    height: 100%;
     font-size: 12px;
     font-family: $fnt--kumbh;
     font-weight: $fw--thin;
@@ -48,76 +49,125 @@ html, body {
 
 h1 {
     text-align: center;
-    font-size: 3rem;
-    margin: 3rem 0;
+    font-size: 2.6rem;
+    margin: 2rem 0 1rem;
+    
+    @include mq {
+        text-align: left;
+    }
 }
 
 // Block Style
 
 body {
-    padding: 0 1rem;
+    padding: 0 2rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    background-image: linear-gradient(to bottom, $bg--violet, $bg--blue);
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    background-image: linear-gradient(to bottom, $bg--violet, $bg--blue)
+    @include mq {
+        padding: 0;
+    }
+}
+
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 9rem 2rem 4rem;
+    @include mq {
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+        padding-right: 9rem;
+        padding-left: 50%;
+
+    }
 }
 
 #card {
     position: relative;
 
     width: 100%;
+    max-width: 900px;
     height: auto;
     
     margin: 12rem 2rem 5rem;
-    padding: 8rem 4rem 2rem;
 
     background-color: white;
     border-radius: 2rem;
     box-shadow: 0 16px 48px 0 #438; 
 
     transition: $tns--main;
+
+    @include mq {
+        width: 900px;
+
+    }
 } 
 
 .img--div {
     width: auto;
     position: absolute;
     left: 50%;
-    top: -108px;
-    transform: translateX(-50%);
+    top: -9rem;
+    transform: translateX(-55%);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    @include mq {
+        width: 50%;
+        left: 14rem;
+        top: 5rem;
+    }
 }
 
 img {
     &:last-of-type {
-        transform: translateY(-75%);
+        transform: translateY(-85%);
+        @include mq {
+            transform: translateY(-77%);
+        }
     } 
 }
 
 #acc--container {
     height: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include mq {
+        justify-content: flex-start;
+    }
 }
 
 .acc--box {
     width: 100%;
     
-    margin: 1rem auto;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     border-bottom: 1px solid #DDD;
+
     cursor: pointer;
     transition: $tns--main;
+    
     &.active {
         .acc--content {
             max-height: 6rem;
         }
         .acc--label {
             font-weight: $fw--wide;
+            color: $txt--darkblue;
+
+            padding-bottom: 1rem;
+            
         }
         i {
             transform: rotate(0deg);
@@ -128,16 +178,16 @@ img {
 .acc--label {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 0.5rem;
 
     font-size: 1.1rem;
     font-weight: $fw--thin;
+    color: $txt--blue;
     
     transition: $tns--main;
 
     
     @include mq {
-        font-size: 1rem;
+        font-size: 1.1rem;
         
         .acc--box:hover & {
             color: orange;
@@ -148,11 +198,19 @@ img {
 .acc--content {
     height: 100%;
     max-height: 0px;
+    padding-left: 0;
+    padding-right: 2rem;
 
-    line-height: 1.2;
+    line-height: 1.5;
     overflow: hidden;
+    color: $txt--blue;
 
     transition: $tns--main;
+
+    @include mq {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
 }
 
 i {
