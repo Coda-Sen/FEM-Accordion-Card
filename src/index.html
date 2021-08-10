@@ -17,13 +17,13 @@
   <section id="card">
     <div id="wrapper">
       <div class="img--div hide--mobile">
-        <img src="images/illustration-woman-online-mobile.svg">
-        <img src="images/bg-pattern-mobile.svg">
+        <img src="images/illustration-woman-online-mobile.svg" alt="Illustration of a woman standing in front of a computer">
+        <img src="images/bg-pattern-mobile.svg" alt="Cast shadow for the previous image">
       </div>
       <div class="img--div hide--desktop">
-        <img src="images/illustration-box-desktop.svg">
-        <img src="images/illustration-woman-online-desktop.svg">
-        <img src="images/bg-pattern-desktop.svg">
+        <img src="images/illustration-box-desktop.svg" alt="Illustration of a box with an 'at'-sign">
+        <img src="images/illustration-woman-online-desktop.svg" alt="Illustration of a woman standing in front of a computer">
+        <img src="images/bg-pattern-desktop.svg" alt="Cast shadow for the previous image">
       </div>
       <div id="acc--container">
         <h1>FAQ</h1>
@@ -87,14 +87,14 @@
       Coded by <a href="https://github.com/Coda-Sen">Coda-Sen</a>.
     </div>
     </section>
+    <script>
+      const accord = document.getElementsByClassName('acc--box');
+    
+    for (i = 0; i < accord.length; i++) {
+      accord[i].addEventListener('click', function(){
+          this.classList.toggle('active')
+      })
+    };
+    </script>
 </body>
-<script>
-  const accord = document.getElementsByClassName('acc--box');
-
-for (i = 0; i < accord.length; i++) {
-  accord[i].addEventListener('click', function(){
-      this.classList.toggle('active')
-  })
-};
-</script>
 </html>
