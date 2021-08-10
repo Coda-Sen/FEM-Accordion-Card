@@ -4,7 +4,7 @@
   "description": "![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)",
   "main": "script.js",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "parcel src/index.html --public-url ./",
     "build": "parcel build src/index.html"
   },
   "repository": {
