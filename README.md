@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Coda-Sen/FEM-Accordion-Card)
-- Live Site URL: [Add live site URL here](https://coda-sen.github.io/FEM-Accordion-Card/)
+- Solution URL: [GitHub](https://github.com/Coda-Sen/FEM-Accordion-Card)
+- Live Site URL: [GitHub Pages](https://coda-sen.github.io/FEM-Accordion-Card/)
 
 ## My process
 
